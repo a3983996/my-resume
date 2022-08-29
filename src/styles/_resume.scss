@@ -1,0 +1,70 @@
+.resume{
+    height: 100vh;
+    background-color: $myColor1;
+    padding:1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .left{
+        width: 60%;
+        padding-left:2vw;
+        height: 80%;
+        p{
+            color:$myColor5;      
+            font-weight: bold;
+            margin:1rem 0;
+        }
+        .programmin{
+            border-radius: 20px;
+            background-color: $myColor5;
+            padding:1vw;
+            box-shadow: 3px 3px 10px  $myColor2 inset;
+            img{
+                width: 3rem;
+                margin: 0.5rem;
+            }
+        }
+        .workflow{
+            border-radius: 20px;
+            background-color: $myColor5;
+            box-shadow: 3px 3px 10px  $myColor2 inset;
+            .item{
+                display: flex;
+                align-items: center;
+                img{
+                    width: 2rem;
+                    height: 2rem;
+                    margin: 0 1rem;
+                }
+                p{
+                    color:$myColor2;
+                    font-weight: bold;
+                }
+            }
+            
+            
+        }
+    }
+    .right{
+        width: 40%;
+        border-radius: 20px;
+        background-color: $myColor5;
+        padding:1vw;
+        box-shadow: 3px 3px 10px  $myColor2 inset;
+        margin-left: 2rem;
+        height: 80%;
+        p{
+            color: $myColor2;
+            font-weight: bold;
+            margin: 2rem 0;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            img{
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    }
+}

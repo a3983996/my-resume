@@ -1,0 +1,66 @@
+.projects{
+    height: 100vh;
+    background-color: $myColor1;
+    color:$myColor5;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        div{
+            position: relative;
+            
+            .layer{
+               
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover{
+                    background-color: rgba($color: #000000, $alpha: .3);
+                }
+                &:hover a{
+                    display: block;
+                }
+                
+                a{
+                    display: none;
+                    background-color: rgba($color: #000000, $alpha: 0.5);
+                    color: white;
+                    cursor: pointer;
+                    width: 30%;
+                    padding:5% 0;
+                    font-size: 1rem;
+                    border:none;
+                    outline: none;
+                    text-align: center;
+                }
+                
+            }
+            img{
+                width: 50vw;
+                height: 25vw;
+                border: 0.1rem solid $myColor4;
+                border-radius: 10px;
+                transition: .3s;
+                margin: 2rem;
+                
+            }
+            .active{
+                transform: scale(1.2);
+            }
+            
+        }
+        
+        
+        
+        
+        
+    }
+}

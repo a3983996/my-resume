@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"微軟正黑體", Arial, Helvetica, sans-serif;
+}
+body{
+    font-family:"微軟正黑體", Arial, Helvetica, sans-serif;
+    overflow-y: hidden;
+    background-color: #132226;
+    
+}
+html{
+    // scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+@import "color";
+@import "transitions";
+@import "aside";
+@import "home";
+

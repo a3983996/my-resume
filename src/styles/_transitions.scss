@@ -1,0 +1,113 @@
+
+.transition{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/coffee.jpg);
+    width: 100%;
+    height: 100vh; 
+    .layer{
+        position: absolute;
+        background-color: #040C0E;
+        width: 100%;
+        height: 100vh;
+        opacity: .5;
+        z-index: -1;
+    }
+    .leftLay{
+        width: 15%;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        background-color: #040C0E;
+    }
+    .rightLay{
+        width: 15%;
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        background-color: #040C0E;
+    }
+    .logo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        white-space: nowrap;
+        svg {
+            animation: fill 1s ease-in forwards 2.4s;
+        }
+        
+    }
+}
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: #A4978E;
+    }
+}
+@keyframes fadeInside {
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+#one {
+    stroke-dasharray: 547px;
+    stroke-dashoffset: 547px;
+    animation: fadeInside 0.6s ease-in forwards;
+}
+#two {
+    stroke-dasharray: 450px;
+    stroke-dashoffset: 450px;
+    animation: fadeInside 0.6s ease-in forwards 0.3s;
+}
+#three {
+    stroke-dasharray: 263px;
+    stroke-dashoffset: 263px;
+    animation: fadeInside 0.6s ease-in forwards 0.6s;
+}
+#four {
+    stroke-dasharray: 355px;
+    stroke-dashoffset: 355px;
+    animation: fadeInside 0.6s ease-in forwards 0.9s;
+}
+#five {
+    stroke-dasharray: 263px;
+    stroke-dashoffset: 263px;
+    animation: fadeInside 0.6s ease-in forwards 1.2s;
+}
+#six {
+    stroke-dasharray: 412px;
+    stroke-dashoffset: 412px;
+    animation: fadeInside 0.6s ease-in forwards 1.5s;
+}
+#seven {
+    stroke-dasharray: 1411px;
+    stroke-dashoffset: 1411px;
+    animation: fadeInside 0.6s ease-in forwards 1.8s;
+}
+#eight {
+    stroke-dasharray: 1467px;
+    stroke-dashoffset: 1467px;
+    animation: fadeInside 0.6s ease-in forwards 2.1s;
+}
+#nine {
+    stroke-dasharray: 1224px;
+    stroke-dashoffset: 1224px;
+    animation: fadeInside 0.6s ease-in forwards 2.4s;
+}
+
+
+
+

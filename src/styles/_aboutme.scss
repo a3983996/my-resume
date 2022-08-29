@@ -1,0 +1,87 @@
+.aboutMe{
+    height: 100vh;
+    background-color: $myColor1;
+    padding-left:1vw;
+    color:$myColor5;
+    display: flex;
+    overflow: hidden;
+
+    .left{
+        width: 60%;
+        padding: 3vw;
+        z-index: 1;
+        h1{
+            margin-bottom: 3vh ;
+            letter-spacing: 3px;
+        }
+        p{
+            letter-spacing: 3px;
+            line-height: 1.5rem;
+        }
+    }
+    .right{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 0;
+        .tilt{
+            transform: skew(-20deg);
+            height: 100%;
+            width: 150%;
+            background-color: $myColor2;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            box-shadow: 1px 1px 10px $myColor2;
+            
+        }
+        .me{
+            width: 25vw;
+            height: 25vw;
+            overflow: hidden;
+            border-radius: 50%;
+            box-shadow: 1px 1px 10px $myColor1;
+            margin:0 auto;
+            .imgContainer{
+                width: 100%;
+                height: 100%;
+                transition: .3s;
+                border-radius: 50%;
+                &:hover{
+                    transform: scale(1.2);
+                }
+                img{
+                    border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .profession{
+            position: relative;
+            width: 25vw;
+            height: 50px;
+            background-color: $myColor4;
+            margin-top: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2{
+                color:$myColor2;  
+            }
+            .layer{
+                position: absolute;
+                width: 15vw;
+                height: 50px;
+                bottom: -1rem;
+                right: -2rem;
+                z-index: -1;
+                background-color: $myColor3;
+            }
+        }
+    }
+    
+}

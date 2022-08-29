@@ -1,0 +1,558 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  overflow-y: hidden;
+  background-color: #132226;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.transition {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/coffee.jpg);
+  width: 100%;
+  height: 100vh;
+}
+
+.transition .layer {
+  position: absolute;
+  background-color: #040C0E;
+  width: 100%;
+  height: 100vh;
+  opacity: .5;
+  z-index: -1;
+}
+
+.transition .leftLay {
+  width: 15%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  background-color: #040C0E;
+}
+
+.transition .rightLay {
+  width: 15%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  background-color: #040C0E;
+}
+
+.transition .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  white-space: nowrap;
+}
+
+.transition .logo svg {
+  animation: fill 1s ease-in forwards 2.4s;
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #A4978E;
+  }
+}
+
+@keyframes fadeInside {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+#one {
+  stroke-dasharray: 547px;
+  stroke-dashoffset: 547px;
+  animation: fadeInside 0.6s ease-in forwards;
+}
+
+#two {
+  stroke-dasharray: 450px;
+  stroke-dashoffset: 450px;
+  animation: fadeInside 0.6s ease-in forwards 0.3s;
+}
+
+#three {
+  stroke-dasharray: 263px;
+  stroke-dashoffset: 263px;
+  animation: fadeInside 0.6s ease-in forwards 0.6s;
+}
+
+#four {
+  stroke-dasharray: 355px;
+  stroke-dashoffset: 355px;
+  animation: fadeInside 0.6s ease-in forwards 0.9s;
+}
+
+#five {
+  stroke-dasharray: 263px;
+  stroke-dashoffset: 263px;
+  animation: fadeInside 0.6s ease-in forwards 1.2s;
+}
+
+#six {
+  stroke-dasharray: 412px;
+  stroke-dashoffset: 412px;
+  animation: fadeInside 0.6s ease-in forwards 1.5s;
+}
+
+#seven {
+  stroke-dasharray: 1411px;
+  stroke-dashoffset: 1411px;
+  animation: fadeInside 0.6s ease-in forwards 1.8s;
+}
+
+#eight {
+  stroke-dasharray: 1467px;
+  stroke-dashoffset: 1467px;
+  animation: fadeInside 0.6s ease-in forwards 2.1s;
+}
+
+#nine {
+  stroke-dasharray: 1224px;
+  stroke-dashoffset: 1224px;
+  animation: fadeInside 0.6s ease-in forwards 2.4s;
+}
+
+aside {
+  min-width: 80px;
+  height: 100vh;
+  background-color: #132226;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 1px 10px #132226;
+  transition: .3s;
+  z-index: 100;
+}
+
+aside .active {
+  position: absolute;
+  right: -5px;
+  width: 5px;
+  top: 0px;
+  background-color: #BE9063;
+  transition: .3s;
+}
+
+aside .aside-item {
+  border-bottom: 1px solid #525B56;
+  width: 75%;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+aside .aside-item i {
+  color: #A4978E;
+  font-size: 2rem;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+aside .aside-item p {
+  color: #A4978E;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.closeAside {
+  transform: translateX(-85px);
+  min-width: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.home {
+  background-color: #525B56;
+  width: 100%;
+  overflow: hidden;
+}
+
+.resume {
+  height: 100vh;
+  background-color: #040C0E;
+  padding: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume .left {
+  width: 60%;
+  padding-left: 2vw;
+  height: 80%;
+}
+
+.resume .left p {
+  color: #A4978E;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.resume .left .programmin {
+  border-radius: 20px;
+  background-color: #A4978E;
+  padding: 1vw;
+  box-shadow: 3px 3px 10px #132226 inset;
+}
+
+.resume .left .programmin img {
+  width: 3rem;
+  margin: 0.5rem;
+}
+
+.resume .left .workflow {
+  border-radius: 20px;
+  background-color: #A4978E;
+  box-shadow: 3px 3px 10px #132226 inset;
+}
+
+.resume .left .workflow .item {
+  display: flex;
+  align-items: center;
+}
+
+.resume .left .workflow .item img {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 1rem;
+}
+
+.resume .left .workflow .item p {
+  color: #132226;
+  font-weight: bold;
+}
+
+.resume .right {
+  width: 40%;
+  border-radius: 20px;
+  background-color: #A4978E;
+  padding: 1vw;
+  box-shadow: 3px 3px 10px #132226 inset;
+  margin-left: 2rem;
+  height: 80%;
+}
+
+.resume .right p {
+  color: #132226;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+.resume .right div {
+  display: flex;
+  align-items: center;
+}
+
+.resume .right div img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.aboutMe {
+  height: 100vh;
+  background-color: #040C0E;
+  padding-left: 1vw;
+  color: #A4978E;
+  display: flex;
+  overflow: hidden;
+}
+
+.aboutMe .left {
+  width: 60%;
+  padding: 3vw;
+  z-index: 1;
+}
+
+.aboutMe .left h1 {
+  margin-bottom: 3vh;
+  letter-spacing: 3px;
+}
+
+.aboutMe .left p {
+  letter-spacing: 3px;
+  line-height: 1.5rem;
+}
+
+.aboutMe .right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+
+.aboutMe .right .tilt {
+  transform: skew(-20deg);
+  height: 100%;
+  width: 150%;
+  background-color: #132226;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  box-shadow: 1px 1px 10px #132226;
+}
+
+.aboutMe .right .me {
+  width: 25vw;
+  height: 25vw;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px #040C0E;
+  margin: 0 auto;
+}
+
+.aboutMe .right .me .imgContainer {
+  width: 100%;
+  height: 100%;
+  transition: .3s;
+  border-radius: 50%;
+}
+
+.aboutMe .right .me .imgContainer:hover {
+  transform: scale(1.2);
+}
+
+.aboutMe .right .me .imgContainer img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.aboutMe .right .profession {
+  position: relative;
+  width: 25vw;
+  height: 50px;
+  background-color: #BE9063;
+  margin-top: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutMe .right .profession h2 {
+  color: #132226;
+}
+
+.aboutMe .right .profession .layer {
+  position: absolute;
+  width: 15vw;
+  height: 50px;
+  bottom: -1rem;
+  right: -2rem;
+  z-index: -1;
+  background-color: #525B56;
+}
+
+.callMe {
+  height: 100vh;
+  background-color: #040C0E;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.callMe .yourCall {
+  background-color: #132226;
+  border-left: 3px solid #525B56;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  flex: 1 1 350px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.callMe .yourCall div {
+  margin-bottom: 1rem;
+  display: flex;
+  width: 100%;
+}
+
+.callMe .yourCall div label {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  white-space: nowrap;
+  color: #A4978E;
+}
+
+.callMe .yourCall div input {
+  background-color: #525B56;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  width: 100%;
+  color: #A4978E;
+}
+
+.callMe .yourCall div input::-webkit-outer-spin-button,
+.callMe .yourCall div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.callMe .yourCall div input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.callMe .yourCall div textarea {
+  background-color: #525B56;
+  resize: none;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  width: 100%;
+  color: #A4978E;
+}
+
+.callMe .yourCall button {
+  background-color: #A4978E;
+  color: #132226;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.3rem 2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.callMe .yourCall a {
+  display: none;
+}
+
+.callMe .myCall {
+  border-left: 3px solid #525B56;
+  background-color: #132226;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 350px;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.callMe .myCall div {
+  display: flex;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.callMe .myCall div h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  color: #BE9063;
+}
+
+.callMe .myCall div p {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #BE9063;
+}
+
+.callMe .myCall div a img {
+  width: 4rem;
+}
+
+.projects {
+  height: 100vh;
+  background-color: #040C0E;
+  color: #A4978E;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+.projects .container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.projects .container div {
+  position: relative;
+}
+
+.projects .container div .layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects .container div .layer:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.projects .container div .layer:hover a {
+  display: block;
+}
+
+.projects .container div .layer a {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  width: 30%;
+  padding: 5% 0;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.projects .container div img {
+  width: 50vw;
+  height: 25vw;
+  border: 0.1rem solid #BE9063;
+  border-radius: 10px;
+  transition: .3s;
+  margin: 2rem;
+}
+
+.projects .container div .active {
+  transform: scale(1.2);
+}
+/*# sourceMappingURL=style.css.map */
